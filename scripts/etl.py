@@ -44,11 +44,33 @@ def standardize_columns(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def basic_cleaning(df: pd.DataFrame) -> pd.DataFrame:
-    """Executa limpeza inicial."""
+def basic_cleaning(df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """Remove linhas totalmente vazias e duplicadas."""
     df = df.dropna(how="all")
+
+    duplicated_count = df.duplicated().sum()
     df = df.drop_duplicates()
-    return df
+
+    return df, duplicated_count
+
+
+def show_dataset_summary(df: pd.DataFrame) -> None:
+    """Exibe resumo do dataset."""
+    print("\n=== RESUMO DO DATASET ===")
+    print(f"Quantidade de linhas: {df.shape[0]}")
+    print(f"Quantidade de colunas: {df.shape[1]}")
+
+    print("\n=== COLUNAS IDENTIFICADAS ===")
+    print(list(df.columns))
+
+    print("\n=== TIPOS DAS COLUNAS ===")
+    print(df.dtypes)
+
+    print("\n=== VALORES NULOS POR COLUNA ===")
+    print(df.isnull().sum())
+
+    print("\n=== PRÉVIA DOS DADOS ===")
+    print(df.head())
 
 
 def save_data(df: pd.DataFrame) -> None:
@@ -73,15 +95,15 @@ def main() -> None:
     print(f"Dimensão original: {df.shape}")
 
     df = standardize_columns(df)
-    df = basic_cleaning(df)
+    df, duplicated_count = basic_cleaning(df)
 
     print(f"Dimensão após limpeza inicial: {df.shape}")
-    print("Colunas identificadas:")
-    print(list(df.columns))
+    print(f"Quantidade de linhas duplicadas removidas: {duplicated_count}")
 
+    show_dataset_summary(df)
     save_data(df)
 
-    print(f"ETL concluído com sucesso. Arquivo salvo em: {OUTPUT_FILE}")
+    print(f"\nETL concluído com sucesso. Arquivo salvo em: {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":
