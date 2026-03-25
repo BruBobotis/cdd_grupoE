@@ -1,65 +1,163 @@
-# Projeto: Manutenção Preditiva de "Zero-Downtime"
+# 🔧 Projeto: Manutenção Preditiva de "Zero-Downtime"
 
-### 1. Identificação do Grupo
-* **Instituição:** Faculdade Engenheiro Salvador Arena
-* **Curso:** Engenharia de Controle e Automação
-* **Grupo:** Grupo E
-* **Integrantes:** 
-  * Bruno Alves Guirado - RA: [062210033]
-  * Guilherme Nascimento - RA: [062210016]
-  * Guilherme Fernando - RA: [062210038]
-  * Lucas Guedes - RA: [062210002]
-  * Pedro Henrique Mateus - RA: [062220039]
----
-
-### 2. Área Problema Selecionada
-O grupo seleciona uma das áreas norteadoras abaixo para o desenvolvimento do projeto:
-* [X] Manutenção Preditiva de Zero-Downtime
-* [ ] Eficiência Energética e Descarbonização via Smart Grids
-* [ ] Controle de Qualidade Autônomo com Visão Computacional
-* [ ] Gêmeos Digitais (Digital Twins) e Analytics em Tempo Real
-
-> **Nota:** Marque com um [x] a opção escolhida.
+> Projeto desenvolvido para a disciplina de **Ciência de Dados**, com foco na aplicação de técnicas de **análise de dados**, **ETL** e **Machine Learning** em um cenário de **manutenção preditiva industrial**.
 
 ---
 
-### 3. Diagnóstico e Definição do Problema
-Esta seção apresenta a fundamentação do desafio. O grupo descreve o cenário de atuação e justifica a importância da solução proposta.
-* **Contexto:** O projeto aborda o cenário de [descrever brevemente o setor, ex: indústria 4.0, gestão de energia].
-* **Problema:** A dificuldade central reside em [explicar o gargalo ou falha que os dados ajudam a resolver].
-* **Impacto:** A solução visa otimizar [mencionar o ganho esperado, ex: redução de custos, aumento de segurança].
+## 👥 1. Identificação do Grupo
+
+- **Instituição:** Faculdade Engenheiro Salvador Arena  
+- **Curso:** Engenharia de Controle e Automação  
+- **Disciplina:** Ciência de Dados  
+- **Grupo:** E  
+
+### Integrantes
+- **Bruno Alves Guedes** - RA: [062210033]
+- **Guilherme Nascimento** - RA: [062210016]
+- **Guilherme Fernando** - RA: [062210038]
+- **Lucas Guedes** - RA: [062210002]
+- **Pedro Henrique Matias** - RA: [062220039]
 
 ---
 
-### 4. Arquitetura de Dados (Fonte e Dataset)
-O projeto utiliza dados estruturados para alimentar os modelos preditivos.
-* **Origem dos Dados:** [Link para o dataset no Kaggle, UCI ou repositório institucional].
-* **Características:** O conjunto de dados apresenta variáveis como [listar principais sensores, carimbos de tempo ou categorias].
-* **Volume:** O dataset conta com [X] registros e [Y] atributos técnicos.
+## 🎯 2. Área-Problema Selecionada
+
+O grupo selecionou a área de **Manutenção Preditiva de "Zero-Downtime"** para o desenvolvimento do projeto.
+
+### ✅ Recorte definido do projeto
+O foco será a **predição de falhas em motores elétricos industriais**, utilizando dados de sensores e variáveis operacionais para antecipar comportamentos anormais e reduzir paradas não planejadas.
+
+### 📌 Justificativa da escolha
+A manutenção preditiva é uma abordagem estratégica dentro da **Indústria 4.0**, pois permite:
+
+- reduzir custos com manutenção corretiva;
+- evitar interrupções inesperadas na produção;
+- aumentar a confiabilidade dos equipamentos;
+- melhorar a segurança operacional;
+- apoiar a tomada de decisão com base em dados.
+
+Além disso, o tema está diretamente relacionado à área de **Controle e Automação**, integrando sensores, monitoramento de processos e inteligência computacional.
 
 ---
 
-### 5. Plano de Tratamento de Dados (ETL)
-O pipeline de dados segue as seguintes etapas de processamento:
-1. **Extração:** A ingestão ocorre via arquivos [CSV/JSON] ou conexão direta com banco de dados.
-2. **Transformação:** O grupo aplica a limpeza de valores ausentes, a remoção de outliers e a normalização das escalas numéricas.
-3. **Carga:** Os dados tratados são disponibilizados na pasta `/data/processed` para consumo dos modelos de Machine Learning.
+## 🧩 3. Diagnóstico e Definição do Problema
+
+Em ambientes industriais, motores elétricos são ativos críticos para a continuidade da operação. Quando ocorrem falhas inesperadas, os impactos podem incluir:
+
+- parada total ou parcial da linha de produção;
+- aumento de custos operacionais;
+- desperdício de recursos;
+- queda de produtividade;
+- riscos à segurança e à confiabilidade do processo.
+
+Tradicionalmente, muitas empresas ainda dependem de:
+
+- **manutenção corretiva**, realizada apenas após a falha;
+- **manutenção preventiva**, baseada em intervalos fixos.
+
+Essas abordagens nem sempre refletem a real condição do equipamento. Nesse contexto, a **manutenção preditiva** se destaca por utilizar dados históricos e operacionais para identificar sinais de falha antes que ela aconteça.
+
+### ❓ Problema de pesquisa
+Como utilizar dados de sensores industriais para prever falhas em motores elétricos e, assim, reduzir o downtime não planejado?
+
+### 💡 Hipótese
+A partir da análise de variáveis operacionais, como vibração, temperatura, corrente e tempo de operação, é possível detectar padrões associados a falhas e apoiar decisões de manutenção de forma antecipada.
 
 ---
 
-### 6. Estrutura do Repositório
-A organização das pastas facilita a manutenção e o versionamento do projeto:
-* `/docs`: Contém os diagramas de fluxo de dados e a documentação técnica.
-* `/data/raw`: Armazena os arquivos de dados originais (não modificados).
-* `/data/processed`: Armazena os dados após a execução do script de ETL.
-* `/scripts`: Contém os códigos Python responsáveis pelo tratamento dos dados.
-* `requirements.txt`: Lista todas as bibliotecas necessárias para a execução do projeto.
+## 🎯 4. Objetivos do Projeto
+
+### Objetivo Geral
+Desenvolver um pipeline de dados capaz de organizar, tratar e analisar informações operacionais de equipamentos industriais, servindo de base para modelos de **Machine Learning aplicados à manutenção preditiva**.
+
+### Objetivos Específicos
+- selecionar um dataset compatível com o tema proposto;
+- estruturar o processo de **ETL**;
+- organizar o repositório para evolução das próximas milestones;
+- preparar os dados para análise exploratória;
+- apoiar futuramente o desenvolvimento de modelos preditivos;
+- contribuir para a redução de falhas inesperadas em equipamentos industriais.
 
 ---
 
-### 7. Instruções para Execução
-Para reproduzir o ambiente de dados e executar o pipeline de ETL:
-1. Clona-se este repositório.
-2. Instalam-se as dependências através do comando:
-   ```bash
-   pip install -r requirements.txt
+## 🗂️ 5. Arquitetura de Dados (Fonte e Dataset)
+
+O projeto utilizará um conjunto de dados estruturado com informações associadas à condição operacional de equipamentos industriais.
+
+### 📥 Origem dos Dados
+Os dados poderão ser obtidos a partir de:
+
+- dataset público para manutenção preditiva;
+- arquivos em formato `.csv`;
+- bases contendo medições de sensores e status do equipamento.
+
+### 🧾 Estrutura esperada dos dados
+Exemplos de atributos que poderão compor o dataset:
+
+- temperatura;
+- vibração;
+- corrente elétrica;
+- rotação;
+- pressão;
+- horas de operação;
+- estado do equipamento;
+- registro de falha;
+- tipo de falha.
+
+### 🎯 Variável alvo
+A variável alvo poderá representar, dependendo da base escolhida:
+
+- **falha / não falha**;
+- **tipo de falha**;
+- **nível de criticidade do equipamento**.
+
+---
+
+## 🔄 6. Plano de Tratamento de Dados (ETL)
+
+O pipeline de dados seguirá as seguintes etapas de processamento:
+
+### 1. Extração
+A coleta dos dados será realizada por meio de arquivos `.csv` e/ou datasets públicos relacionados à manutenção preditiva.
+
+### 2. Transformação
+Nesta etapa, serão executados procedimentos como:
+
+- leitura e inspeção inicial dos dados;
+- identificação de valores ausentes;
+- remoção ou tratamento de inconsistências;
+- análise de outliers;
+- padronização de colunas;
+- conversão de tipos de dados;
+- normalização ou padronização de variáveis numéricas;
+- seleção de atributos relevantes para análise.
+
+### 3. Carga
+Após o tratamento, os dados serão armazenados na pasta `data/processed`, ficando prontos para as etapas de:
+
+- análise exploratória de dados;
+- modelagem preditiva;
+- avaliação de desempenho dos modelos.
+
+---
+
+## 🧱 7. Estrutura do Repositório
+
+A organização das pastas foi definida para facilitar a manutenção, rastreabilidade e evolução do projeto ao longo das milestones.
+
+```bash
+cdd_grupoE/
+│
+├── data/
+│   ├── raw/                # Dados brutos originais
+│   └── processed/          # Dados tratados e prontos para análise
+│
+├── docs/                   # Diagramas, imagens e documentação complementar
+│
+├── notebooks/              # Análises exploratórias e experimentos
+│
+├── scripts/                # Scripts de ETL e pré-processamento
+│
+├── requirements.txt        # Dependências do projeto
+├── .gitignore              # Arquivos e pastas ignorados pelo Git
+└── README.md               # Documentação principal do projeto
