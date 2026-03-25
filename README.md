@@ -4,7 +4,7 @@
 * **Instituição:** Faculdade Engenheiro Salvador Arena
 * **Curso:** Engenharia de Controle e Automação
 * **Grupo:** Grupo E
-* **Integrantes:** *
+* **Integrantes:** 
   * [Bruno Alves Guirado] - RA: [062210033]
   * [Guilherme Nascimento] - RA: [062210016]
   * [Guilherme Fernando] - RA: [062210038]
@@ -14,7 +14,7 @@
 
 ### 2. Área Problema Selecionada
 O grupo seleciona uma das áreas norteadoras abaixo para o desenvolvimento do projeto:
-* [ ] Manutenção Preditiva de Zero-Downtime
+* [X] Manutenção Preditiva de Zero-Downtime
 * [ ] Eficiência Energética e Descarbonização via Smart Grids
 * [ ] Controle de Qualidade Autônomo com Visão Computacional
 * [ ] Gêmeos Digitais (Digital Twins) e Analytics em Tempo Real
