@@ -91,6 +91,9 @@ Os dados poderão ser obtidos a partir de:
 - arquivos em formato `.csv`;
 - bases contendo medições de sensores e status do equipamento.
 
+### Dataset selecionado
+Para a fase M1, o grupo utilizará o **AI4I 2020 Predictive Maintenance Dataset**, disponibilizado pela UCI Machine Learning Repository. A base foi escolhida por ser voltada especificamente para manutenção preditiva industrial, contendo 10.000 registros e variáveis operacionais relevantes para análise de falhas, como temperatura, rotação, torque, desgaste da ferramenta e indicação de falha da máquina.
+
 ### 🧾 Estrutura esperada dos dados
 Exemplos de atributos que poderão compor o dataset:
 
