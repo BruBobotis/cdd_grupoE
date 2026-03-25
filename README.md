@@ -5,11 +5,11 @@
 * **Curso:** Engenharia de Controle e Automação
 * **Grupo:** Grupo E
 * **Integrantes:** 
-  * [Bruno Alves Guirado] - RA: [062210033]
-  * [Guilherme Nascimento] - RA: [062210016]
-  * [Guilherme Fernando] - RA: [062210038]
-  * [Lucas Guedes] - RA: [062210002]
-  * [Pedro Henrique Mateus] - RA: [062220039]
+  * Bruno Alves Guirado - RA: [062210033]
+  * Guilherme Nascimento - RA: [062210016]
+  * Guilherme Fernando - RA: [062210038]
+  * Lucas Guedes - RA: [062210002]
+  * Pedro Henrique Mateus - RA: [062220039]
 ---
 
 ### 2. Área Problema Selecionada
