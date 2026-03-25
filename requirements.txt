@@ -19,7 +19,7 @@ scipy
 statsmodels
 
 # Redes Neurais e Visão Computacional (Opcional por área)
-tensorflow
+# tensorflow
 opencv-python
 
 # Utilitários e Ambiente

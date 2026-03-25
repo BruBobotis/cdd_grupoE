@@ -1,0 +1,43 @@
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente
+.env
+
+# Logs e temporários
+*.log
+*.tmp
+*.bak
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Build / distribuição
+build/
+dist/
+*.egg-info/
+
+# Saídas geradas
+data/processed/*.csv
+data/processed/*.xlsx
+data/processed/*.parquet
+
+# Modelos
+models/
+*.pkl
+*.joblib
