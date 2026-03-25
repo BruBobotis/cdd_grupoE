@@ -8,7 +8,7 @@ OUTPUT_FILE = PROCESSED_DIR / "dados_tratados.csv"
 
 
 def ensure_directories() -> None:
-    """Garante que as pastassprincipais existam."""
+    """Garante que as pastas principais existam."""
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
