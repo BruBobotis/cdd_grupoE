@@ -47,10 +47,8 @@ def standardize_columns(df: pd.DataFrame) -> pd.DataFrame:
 def basic_cleaning(df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
     """Remove linhas totalmente vazias e duplicadas."""
     df = df.dropna(how="all")
-
     duplicated_count = df.duplicated().sum()
     df = df.drop_duplicates()
-
     return df, duplicated_count
 
 
@@ -79,7 +77,7 @@ def save_data(df: pd.DataFrame) -> None:
 
 
 def main() -> None:
-    print("Iniciando ETL da M1...")
+    print("Iniciando ETL da M1/M2...")
     ensure_directories()
 
     input_file = find_input_file()
