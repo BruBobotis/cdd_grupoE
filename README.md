@@ -247,11 +247,14 @@ cd cdd_grupoE
 ```
 
 ### 3. Instale as dependências
+
 ```bash
 py -m pip install -r .\requirements.txt
-### 4. Execute o ETL inicial
 ```
+### 4. Execute o ETL inicial
+```bash
 py scripts/etl.py
+```
 ### 5. Abra o notebook da EDA
 ```bash
 notebooks/M2_EDA.ipynb
