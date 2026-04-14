@@ -235,21 +235,27 @@ As principais ferramentas e bibliotecas utilizadas até o momento são:
 ## 🚀 11. Instruções para Execução
 
 ### 1. Clone este repositório
+
 ```bash
 git clone https://github.com/BruBobotis/cdd_grupoE.git
+```
+
 ### 2. Acesse a pasta do projeto
+
 ```bash
 cd cdd_grupoE
+```
+
 ### 3. Instale as dependências
 ```bash
 py -m pip install -r .\requirements.txt
 ### 4. Execute o ETL inicial
-```bash
+```
 py scripts/etl.py
 ### 5. Abra o notebook da EDA
 ```bash
 notebooks/M2_EDA.ipynb
-
+```
 ---
 
 ## 📅 12. Planejamento por Milestones
