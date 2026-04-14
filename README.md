@@ -214,3 +214,113 @@ cdd_grupoE/
 ├── requirements.txt        # Dependências do projeto
 ├── .gitignore              # Arquivos e pastas ignorados pelo Git
 └── README.md               # Documentação principal do projeto
+
+--- 
+
+## 🛠️ 10. Tecnologias Utilizadas
+
+As principais ferramentas e bibliotecas utilizadas até o momento são:
+
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Matplotlib**
+- **Seaborn**
+- **Scikit-learn**
+- **Jupyter Notebook / VS Code**
+- **OpenPyXL**
+
+---
+
+## 🚀 11. Instruções para Execução
+
+### 1. Clone este repositório
+```bash
+git clone https://github.com/BruBobotis/cdd_grupoE.git
+### 2. Acesse a pasta do projeto
+```bash
+cd cdd_grupoE
+### 3. Instale as dependências
+```bash
+py -m pip install -r .\requirements.txt
+### 4. Execute o ETL inicial
+```bash
+py scripts/etl.py
+### 5. Abra o notebook da EDA
+```bash
+notebooks/M2_EDA.ipynb
+
+---
+
+## 📅 12. Planejamento por Milestones
+
+### 🟦 M1 — Diagnóstico e ETL
+- definição do problema;
+- escolha do dataset;
+- criação e organização do repositório;
+- estruturação inicial do pipeline de ETL;
+- documentação do projeto.
+
+### 🟨 M2 — Análise Exploratória de Dados (EDA)
+- análise estatística descritiva;
+- visualização das distribuições;
+- análise de correlação;
+- identificação de padrões e outliers;
+- validação inicial de hipóteses.
+
+### 🟧 M3 — Modelagem Preditiva
+- preparação dos dados para treino;
+- aplicação de algoritmos de Machine Learning;
+- avaliação com métricas adequadas;
+- comparação entre modelos.
+
+### 🟥 M4 — Refinamento e Entrega Final
+- ajustes no pipeline;
+- melhoria dos modelos;
+- apresentação dos resultados;
+- possível construção de dashboard ou protótipo visual.
+
+---
+
+## 📌 13. Status Atual do Projeto
+
+📍 **Fase atual:** **M2 — Análise Exploratória de Dados (EDA)**
+
+No momento, o grupo está concentrado em:
+
+- explorar o comportamento das variáveis do dataset;
+- identificar correlações relevantes;
+- detectar possíveis outliers;
+- levantar hipóteses analíticas para a etapa de modelagem.
+
+---
+
+## 🔮 14. Próximos Passos
+
+Os próximos passos planejados são:
+
+- concluir e refinar a EDA;
+- selecionar atributos mais relevantes;
+- preparar os dados para modelagem;
+- iniciar testes com algoritmos de classificação;
+- comparar abordagens preditivas na M3.
+
+---
+
+## 🤝 15. Considerações Finais
+
+Este projeto busca aplicar conceitos de **Ciência de Dados** em um problema real da engenharia, conectando análise de dados, automação industrial e inteligência computacional. A proposta está alinhada aos princípios da **Indústria 4.0**, com potencial para contribuir na confiabilidade de sistemas produtivos e na redução de custos operacionais.
+
+---
+
+## 🤖 16. Apêndice de IA
+
+A ferramenta de IA foi utilizada como apoio em atividades de:
+
+- organização da estrutura do repositório;
+- revisão de código Python;
+- apoio na construção do pipeline inicial de ETL;
+- sugestões de visualizações e estruturação da EDA;
+- apoio textual na documentação do projeto.
+
+Toda interpretação dos resultados, validação das análises e conferência das informações foi realizada manualmente pelo grupo.
