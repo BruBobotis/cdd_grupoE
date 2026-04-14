@@ -214,7 +214,7 @@ cdd_grupoE/
 ├── requirements.txt        # Dependências do projeto
 ├── .gitignore              # Arquivos e pastas ignorados pelo Git
 └── README.md               # Documentação principal do projeto
-
+```
 --- 
 
 ## 🛠️ 10. Tecnologias Utilizadas
