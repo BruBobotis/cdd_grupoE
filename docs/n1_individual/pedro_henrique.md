@@ -7,4 +7,5 @@ Cada aluno selecionou uma variável numérica relacionada à condição operacio
 ### Integrante e tema individual
 
 - **Pedro Henrique Mateus** — `notebooks/n1_individual/Aprofundamento_Estatistico_PedroHenrique.ipynb`  
-  O aluno **Pedro Henrique Mateus** investigará estatisticamente se existe diferença significativa na variável **`rotational_speed_[rpm]`** entre máquinas com falha e sem falha. Essa escolha se baseia nos indícios observados durante a EDA, em que a velocidade rotacional apresentou comportamento distinto entre os grupos, podendo representar um indicador relevante para a detecção de anomalias operacionais.
+  
+  O aluno **Pedro Henrique Mateus** investigou estatisticamente a variável **`rotational_speed_[rpm]`**, comparando máquinas com falha e sem falha no dataset AI4I 2020 Predictive Maintenance Dataset. O teste de normalidade indicou ausência de distribuição normal, levando à aplicação do **teste de Mann-Whitney U**, que apresentou **p-valor < 0,001**. O resultado permitiu rejeitar a hipótese nula, indicando diferença estatisticamente significativa entre os grupos. Entretanto, o tamanho do efeito (**Cohen’s d = 0,2444**) foi pequeno, sugerindo que a velocidade rotacional possui associação estatística com a falha, mas com relevância prática limitada para a modelagem preditiva. 
