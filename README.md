@@ -16,7 +16,7 @@
 - **Guilherme Nascimento** - RA: [062210016]
 - **Guilherme Fernando** - RA: [062210038]
 - **Lucas Guedes** - RA: [062210002]
-- **Pedro Henrique Matias** - RA: [062220039]
+- **Pedro Henrique Mateus** - RA: [062220039]
 
 ---
 
@@ -68,14 +68,15 @@ A partir da análise de variáveis operacionais, como temperatura, velocidade ro
 ## 🎯 4. Objetivos do Projeto
 
 ### Objetivo Geral
-Desenvolver um pipeline de dados capaz de organizar, tratar e analisar informações operacionais de equipamentos industriais, servindo de base para modelos de **Machine Learning aplicados à manutenção preditiva**.
+Desenvolver um pipeline de dados capaz de organizar, tratar, analisar e modelar informações operacionais de equipamentos industriais, servindo de base para modelos de **Machine Learning aplicados à manutenção preditiva**.
 
 ### Objetivos Específicos
 - selecionar um dataset compatível com o tema proposto;
 - estruturar o processo de **ETL**;
 - realizar a **Análise Exploratória de Dados (EDA)**;
 - identificar correlações, padrões e possíveis outliers;
-- preparar os dados para futuras etapas de modelagem;
+- preparar os dados para as etapas de modelagem;
+- desenvolver e avaliar modelos preditivos;
 - contribuir para a redução de falhas inesperadas em equipamentos industriais.
 
 ---
@@ -88,7 +89,7 @@ O projeto utiliza um conjunto de dados estruturado com informações associadas 
 Os dados foram obtidos a partir de um dataset público de manutenção preditiva.
 
 ### Dataset selecionado
-Para as etapas M1 e M2, o grupo utiliza o **AI4I 2020 Predictive Maintenance Dataset**, disponibilizado pela **UCI Machine Learning Repository**. A base foi escolhida por ser voltada especificamente para manutenção preditiva industrial, contendo **10.000 registros** e variáveis operacionais relevantes para análise de falhas, como:
+Para as etapas do projeto, o grupo utiliza o **AI4I 2020 Predictive Maintenance Dataset**, disponibilizado pela **UCI Machine Learning Repository**. A base foi escolhida por ser voltada especificamente para manutenção preditiva industrial, contendo **10.000 registros** e variáveis operacionais relevantes para análise de falhas, como:
 
 - temperatura do ar;
 - temperatura de processo;
@@ -138,18 +139,19 @@ Nesta etapa, são executados procedimentos como:
 - verificação de valores nulos;
 - verificação de duplicidades;
 - identificação inicial de outliers;
-- preparação da base para análise exploratória.
+- preparação da base para análise exploratória e modelagem.
 
 ### 3. Carga
 Após o tratamento inicial, os dados são armazenados na pasta `data/processed`, ficando prontos para as etapas de exploração, visualização e modelagem preditiva.
 
 ---
 
-## 📊 7. Etapa Atual — M2: Análise Exploratória de Dados (EDA)
+## 📊 7. Etapas Desenvolvidas
 
+### M2 — Análise Exploratória de Dados (EDA)
 Na etapa M2, o grupo realizou a **Análise Exploratória de Dados (EDA)** com o objetivo de compreender melhor a estrutura da base e identificar padrões importantes para o problema de manutenção preditiva.
 
-### Atividades desenvolvidas na M2
+#### Atividades desenvolvidas na M2
 - carregamento e inspeção da base tratada;
 - análise descritiva das variáveis;
 - verificação de consistência e duplicidades;
@@ -159,7 +161,7 @@ Na etapa M2, o grupo realizou a **Análise Exploratória de Dados (EDA)** com o 
 - construção de matriz de correlação;
 - elaboração de gráficos analíticos para apoiar hipóteses iniciais.
 
-### Principais focos da EDA
+#### Principais focos da EDA
 Durante esta etapa, buscou-se observar:
 
 - o comportamento da variável de falha da máquina;
@@ -168,16 +170,26 @@ Durante esta etapa, buscou-se observar:
 - o comportamento da velocidade rotacional em registros com e sem falha;
 - a influência da temperatura de processo na ocorrência de falhas.
 
+### M3 — Modelagem de IA
+Na etapa M3, o grupo iniciou a transformação dos achados da EDA em uma solução prática de **Machine Learning**, com foco na predição da variável **`machine_failure`**.
+
+#### Atividades desenvolvidas na M3
+- seleção das variáveis preditoras relevantes;
+- preparação da base para treino e teste;
+- treinamento de modelos de classificação;
+- avaliação de desempenho com métricas adequadas;
+- comparação entre abordagens de modelagem;
+- definição do modelo com melhor desempenho para o problema proposto.
+
 ---
 
-## 📈 8. Notebook da EDA
+## 📈 8. Notebooks e Modelagem
 
-A análise exploratória foi desenvolvida em notebook Jupyter, contendo células de código e markdown para documentação do raciocínio analítico.
-
-### Arquivo principal
+### Arquivos principais
 - `notebooks/M2_EDA.ipynb`
+- `notebooks/M3_Modelagem_IA.ipynb`
 
-### Conteúdo do notebook
+### Conteúdo do notebook da M2
 O notebook contempla:
 
 - objetivo da análise;
@@ -188,6 +200,17 @@ O notebook contempla:
 - identificação de outliers;
 - levantamento de hipóteses;
 - conclusão da etapa.
+
+### Conteúdo do notebook da M3
+O notebook contempla:
+
+- preparação dos dados para modelagem;
+- definição das variáveis de entrada e saída;
+- separação entre treino e teste;
+- treinamento dos modelos;
+- avaliação de desempenho;
+- comparação entre modelos;
+- seleção do modelo final.
 
 ---
 
@@ -205,11 +228,17 @@ cdd_grupoE/
 ├── docs/                   # Diagramas, imagens e documentação complementar
 │
 ├── notebooks/              # Análises exploratórias e experimentos
-│   └── M2_EDA.ipynb
+│   ├── M2_EDA.ipynb
+│   ├── M3_Modelagem_IA.ipynb
+│   └── n1_individual/
 │
-├── scripts/                # Scripts de ETL e pré-processamento
+├── scripts/                # Scripts de ETL, pré-processamento e modelagem
 │   ├── etl.py
-│   └── preprocess.py
+│   ├── preprocess.py
+│   ├── train_model.py
+│   └── predict.py
+│
+├── models/                 # Modelos treinados/exportados
 │
 ├── requirements.txt        # Dependências do projeto
 ├── .gitignore              # Arquivos e pastas ignorados pelo Git
@@ -259,9 +288,71 @@ py scripts/etl.py
 ```bash
 notebooks/M2_EDA.ipynb
 ```
+### 6. Abra o notebook da Modelagem
+```bash
+notebooks/M3_Modelagem_IA.ipynb
+```
+### 7. Execute o script de treino do modelo (quando disponível)
+```bash
+py scripts/train_model.py
+```
+---
+## 🤖 12. Modelagem Preditiva
+
+### Problema de modelagem
+O problema foi tratado como uma tarefa de **classificação supervisionada**, com o objetivo de prever a ocorrência de falha da máquina com base nas variáveis operacionais do dataset.
+
+### Variável alvo
+- `machine_failure`
+
+### Variáveis preditoras utilizadas
+- `type`
+- `air_temperature_[k]`
+- `process_temperature_[k]`
+- `rotational_speed_[rpm]`
+- `torque_[nm]`
+- `tool_wear_[min]`
+
+### Variáveis descartadas
+- `udi`
+- `product_id`
+
+Essas variáveis foram descartadas por atuarem como identificadores, sem contribuição relevante esperada para a predição.
+
+### Modelos avaliados
+- **Regressão Logística** *(preencher se utilizado)*
+- **Árvore de Decisão** *(preencher se utilizado)*
+- **Random Forest** *(preencher se utilizado)*
+- **Outro modelo** *(se aplicável)*
+
+### Modelo selecionado
+**[Preencher com o modelo final escolhido pelo grupo]**
+
+### Métricas obtidas
+- **Acurácia:** [preencher]
+- **Precisão:** [preencher]
+- **Recall:** [preencher]
+- **F1-score:** [preencher]
+
+### Matriz de confusão
+**[Inserir imagem, resumo textual ou referência ao notebook]**
+
+### Interpretação dos resultados
+**[Preencher com um pequeno parágrafo explicando o desempenho do modelo, se ele atende ao problema e quais foram os principais achados da etapa de modelagem.]**
+
 ---
 
-## 📅 12. Planejamento por Milestones
+## 🌐 13. Protótipo e Integração
+
+### Link do protótipo no Google AI Studio
+**[Inserir link público/compartilhável aqui]**
+
+### Observação sobre a implementação
+O desenvolvimento analítico e a modelagem preditiva do projeto foram conduzidos em **Python**, utilizando **VS Code** e notebooks Jupyter. O **Google AI Studio** foi utilizado como ambiente complementar de prototipação e compartilhamento da lógica da solução, conforme solicitado na etapa M3 da disciplina.
+
+---
+
+## 📅 14. Planejamento por Milestones
 
 ### 🟦 M1 — Diagnóstico e ETL
 - definição do problema;
@@ -281,48 +372,53 @@ notebooks/M2_EDA.ipynb
 - preparação dos dados para treino;
 - aplicação de algoritmos de Machine Learning;
 - avaliação com métricas adequadas;
-- comparação entre modelos.
+- comparação entre modelos;
+- definição do modelo final.
 
 ### 🟥 M4 — Refinamento e Entrega Final
 - ajustes no pipeline;
 - melhoria dos modelos;
 - apresentação dos resultados;
-- possível construção de dashboard ou protótipo visual.
+- refinamento técnico da solução.
 
 ---
 
-## 📌 13. Status Atual do Projeto
+## 📌 15. Status Atual do Projeto
 
-📍 **Fase atual:** **M2 — Análise Exploratória de Dados (EDA)**
+📍 **Fase atual:** **M3 — Modelagem Preditiva**
 
 No momento, o grupo está concentrado em:
 
-- explorar o comportamento das variáveis do dataset;
-- identificar correlações relevantes;
-- detectar possíveis outliers;
-- levantar hipóteses analíticas para a etapa de modelagem.
+- preparar os dados para o treinamento dos modelos;
+- treinar e comparar algoritmos de classificação;
+- avaliar métricas de desempenho;
+- selecionar o modelo mais adequado para o problema;
+- integrar a solução ao protótipo da etapa.
 
 ---
 
-## 🔮 14. Próximos Passos
+## 🔮 16. Próximos Passos
 
 Os próximos passos planejados são:
 
-- concluir e refinar a EDA;
-- selecionar atributos mais relevantes;
-- preparar os dados para modelagem;
-- iniciar testes com algoritmos de classificação;
-- comparar abordagens preditivas na M3.
+- concluir o treinamento e a avaliação dos modelos;
+- definir o modelo final com base nas métricas;
+- organizar o código-fonte da modelagem no repositório;
+- estruturar e publicar o protótipo no Google AI Studio;
+- preparar a documentação final da M3;
+- avançar para a etapa de refinamento técnico da solução na M4.
 
 ---
 
-## 🤝 15. Considerações Finais
+## 🤝 17. Considerações Finais
 
 Este projeto busca aplicar conceitos de **Ciência de Dados** em um problema real da engenharia, conectando análise de dados, automação industrial e inteligência computacional. A proposta está alinhada aos princípios da **Indústria 4.0**, com potencial para contribuir na confiabilidade de sistemas produtivos e na redução de custos operacionais.
 
+Na etapa atual, o foco está na consolidação de uma solução preditiva funcional, capaz de transformar os dados tratados e os achados da análise exploratória em uma aplicação prática de apoio à manutenção preditiva.
+
 ---
 
-## 🤖 16. Apêndice de IA
+## 🤖 18. Apêndice de IA
 
 A ferramenta de IA foi utilizada como apoio em atividades de:
 
@@ -330,6 +426,27 @@ A ferramenta de IA foi utilizada como apoio em atividades de:
 - revisão de código Python;
 - apoio na construção do pipeline inicial de ETL;
 - sugestões de visualizações e estruturação da EDA;
+- apoio na estruturação da etapa de modelagem preditiva;
 - apoio textual na documentação do projeto.
 
-Toda interpretação dos resultados, validação das análises e conferência das informações foi realizada manualmente pelo grupo.
+Toda interpretação dos resultados, validação das análises, conferência das métricas e avaliação dos modelos foi realizada manualmente pelo grupo.
+
+---
+
+## 🧪 19. N1 Individual — Aprofundamento Estatístico
+
+Como continuidade da etapa de Análise Exploratória de Dados (EDA), cada integrante do grupo desenvolveu uma investigação individual com foco em **Estatística Inferencial**, utilizando o dataset **AI4I 2020 Predictive Maintenance Dataset**. O objetivo desta atividade foi verificar, por meio de testes estatísticos, se os padrões observados na etapa exploratória representam evidências relevantes para o problema de manutenção preditiva.
+
+### Integrantes e temas individuais
+
+- **Bruno Alves Guirado** — `notebooks/n1_individual/Aprofundamento_Estatistico_BrunoAlvesGuirado.ipynb`  
+  O aluno investigou estatisticamente a variável **`torque_[nm]`**, comparando máquinas com falha e sem falha. Os resultados indicaram diferença estatisticamente significativa entre os grupos, com evidência de maior torque em máquinas com falha e tamanho de efeito elevado.
+
+- **Lucas Guedes** — `notebooks/n1_individual/Aprofundamento_Estatistico_LucasGuedes.ipynb`  
+  O aluno investigou estatisticamente a variável **`process_temperature_[k]`**, comparando máquinas com falha e sem falha. Os resultados indicaram diferença estatisticamente significativa entre os grupos, porém com efeito prático pequeno.
+
+- **Pedro Henrique Matias** — `notebooks/n1_individual/Aprofundamento_Estatistico_PedroHenrique.ipynb`  
+  O aluno investigou estatisticamente a variável **`rotational_speed_[rpm]`**, comparando máquinas com falha e sem falha. Os resultados indicaram diferença estatisticamente significativa entre os grupos, com velocidade rotacional inferior nas máquinas com falha, mas com efeito prático pequeno.
+
+- **Guilherme Nascimento** — `notebooks/n1_individual/Aprofundamento_Estatistico_GuilhermeNascimento.ipynb`  
+  O aluno investigou estatisticamente a variável **`tool_wear_[min]`**, comparando máquinas com falha e sem falha. Os resultados indicaram associação estatisticamente significativa entre o desgaste da ferramenta e a ocorrência de falhas, reforçando a relevância da variável para o problema estudado.
