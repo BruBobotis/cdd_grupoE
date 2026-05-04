@@ -349,10 +349,15 @@ Os resultados obtidos indicaram que a **Árvore de Decisão** foi o modelo com m
 ## 🌐 13. Protótipo e Integração
 
 ### Link do protótipo no Google AI Studio
-**[Inserir link público/compartilhável aqui]**
+**(https://ai.studio/apps/537d8210-d70f-4d54-b574-368bb188dc8a)**
 
 ### Observação sobre a implementação
-O desenvolvimento analítico e a modelagem preditiva do projeto foram conduzidos em **Python**, utilizando **VS Code** e notebooks Jupyter. O **Google AI Studio** será utilizado como ambiente complementar de prototipação e compartilhamento da lógica da solução, conforme solicitado na etapa M3 da disciplina.
+O desenvolvimento analítico e a modelagem preditiva do projeto foram conduzidos em **Python**, utilizando **VS Code** e notebooks Jupyter. O **Google AI Studio** foi utilizado como ambiente complementar de prototipação, permitindo disponibilizar uma interface interativa para inserção de variáveis operacionais e visualização da previsão de falha da máquina.
+
+O protótipo desenvolvido permite ao usuário informar o tipo do produto, temperatura do ar, temperatura de processo, velocidade rotacional, torque e desgaste da ferramenta, retornando uma classificação final (**Falha** ou **Sem falha**), nível de risco, probabilidade estimada, justificativa técnica e recomendação operacional.
+
+Essa integração permitiu transformar os resultados da modelagem em uma solução visual e funcional, alinhada à proposta da etapa M3.
+
 ---
 
 ## 📅 14. Planejamento por Milestones
