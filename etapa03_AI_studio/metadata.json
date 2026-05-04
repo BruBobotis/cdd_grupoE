@@ -1,0 +1,6 @@
+{
+  "name": "Previsor de Falha Industrial",
+  "description": "Uma aplicação para previsão de falhas em máquinas industriais baseada em parâmetros operacionais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
