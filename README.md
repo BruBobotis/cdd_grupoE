@@ -12,7 +12,7 @@
 - **Grupo:** E  
 
 ### Integrantes
-- **Bruno Alves Guedes** - RA: [062210033]
+- **Bruno Alves Guirado** - RA: [062210033]
 - **Guilherme Nascimento** - RA: [062210016]
 - **Guilherme Fernando** - RA: [062210038]
 - **Lucas Guedes** - RA: [062210002]
@@ -320,25 +320,29 @@ O problema foi tratado como uma tarefa de **classificação supervisionada**, co
 Essas variáveis foram descartadas por atuarem como identificadores, sem contribuição relevante esperada para a predição.
 
 ### Modelos avaliados
-- **Regressão Logística** *(preencher se utilizado)*
-- **Árvore de Decisão** *(preencher se utilizado)*
-- **Random Forest** *(preencher se utilizado)*
-- **Outro modelo** *(se aplicável)*
+- **Regressão Logística**
+- **Árvore de Decisão**
+- **Random Forest**
 
 ### Modelo selecionado
-**[Preencher com o modelo final escolhido pelo grupo]**
+**Árvore de Decisão**
 
 ### Métricas obtidas
-- **Acurácia:** [preencher]
-- **Precisão:** [preencher]
-- **Recall:** [preencher]
-- **F1-score:** [preencher]
+- **Acurácia:** 0,9780
+- **Precisão:** 0,7143
+- **Recall:** 0,5882
+- **F1-score:** 0,6452
 
 ### Matriz de confusão
-**[Inserir imagem, resumo textual ou referência ao notebook]**
+A matriz de confusão do melhor modelo apresentou os seguintes resultados:
+
+- **Verdadeiros Negativos (TN):** 1916
+- **Falsos Positivos (FP):** 16
+- **Falsos Negativos (FN):** 28
+- **Verdadeiros Positivos (TP):** 40
 
 ### Interpretação dos resultados
-**[Preencher com um pequeno parágrafo explicando o desempenho do modelo, se ele atende ao problema e quais foram os principais achados da etapa de modelagem.]**
+Os resultados obtidos indicaram que a **Árvore de Decisão** foi o modelo com melhor desempenho geral entre os algoritmos avaliados, especialmente ao considerar o **F1-score**, métrica adotada como principal devido ao desbalanceamento da variável alvo. O modelo apresentou alta acurácia e bom nível de precisão, além de desempenho razoável na identificação da classe de falha. Embora ainda existam falsos negativos, a solução demonstrou potencial prático para apoiar a detecção de falhas em contexto de manutenção preditiva.
 
 ---
 
@@ -348,8 +352,7 @@ Essas variáveis foram descartadas por atuarem como identificadores, sem contrib
 **[Inserir link público/compartilhável aqui]**
 
 ### Observação sobre a implementação
-O desenvolvimento analítico e a modelagem preditiva do projeto foram conduzidos em **Python**, utilizando **VS Code** e notebooks Jupyter. O **Google AI Studio** foi utilizado como ambiente complementar de prototipação e compartilhamento da lógica da solução, conforme solicitado na etapa M3 da disciplina.
-
+O desenvolvimento analítico e a modelagem preditiva do projeto foram conduzidos em **Python**, utilizando **VS Code** e notebooks Jupyter. O **Google AI Studio** será utilizado como ambiente complementar de prototipação e compartilhamento da lógica da solução, conforme solicitado na etapa M3 da disciplina.
 ---
 
 ## 📅 14. Planejamento por Milestones
@@ -445,7 +448,7 @@ Como continuidade da etapa de Análise Exploratória de Dados (EDA), cada integr
 - **Lucas Guedes** — `notebooks/n1_individual/Aprofundamento_Estatistico_LucasGuedes.ipynb`  
   O aluno investigou estatisticamente a variável **`process_temperature_[k]`**, comparando máquinas com falha e sem falha. Os resultados indicaram diferença estatisticamente significativa entre os grupos, porém com efeito prático pequeno.
 
-- **Pedro Henrique Matias** — `notebooks/n1_individual/Aprofundamento_Estatistico_PedroHenrique.ipynb`  
+- **Pedro Henrique Mateus** — `notebooks/n1_individual/Aprofundamento_Estatistico_PedroHenrique.ipynb`  
   O aluno investigou estatisticamente a variável **`rotational_speed_[rpm]`**, comparando máquinas com falha e sem falha. Os resultados indicaram diferença estatisticamente significativa entre os grupos, com velocidade rotacional inferior nas máquinas com falha, mas com efeito prático pequeno.
 
 - **Guilherme Nascimento** — `notebooks/n1_individual/Aprofundamento_Estatistico_GuilhermeNascimento.ipynb`  
