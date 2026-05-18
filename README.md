@@ -458,3 +458,36 @@ Como continuidade da etapa de Análise Exploratória de Dados (EDA), cada integr
 
 - **Guilherme Nascimento** — `notebooks/n1_individual/Aprofundamento_Estatistico_GuilhermeNascimento.ipynb`  
   O aluno investigou estatisticamente a variável **`tool_wear_[min]`**, comparando máquinas com falha e sem falha. Os resultados indicaram associação estatisticamente significativa entre o desgaste da ferramenta e a ocorrência de falhas, reforçando a relevância da variável para o problema estudado.
+
+## 🚀 20. Resultados da Otimização do Modelo (M4)
+
+Na etapa M4, foi realizada a otimização da **Árvore de Decisão** por meio de **GridSearchCV**, com validação cruzada de 5 dobras e foco na métrica **F1-score**, devido ao desbalanceamento da variável alvo.
+
+### Melhores hiperparâmetros encontrados
+- **criterion:** entropy
+- **max_depth:** None
+- **min_samples_leaf:** 2
+- **min_samples_split:** 2
+
+### Comparação entre modelo base (M3) e modelo otimizado (M4)
+
+| Modelo | Acurácia | Precisão | Recall | F1-score |
+|--------|----------|----------|--------|----------|
+| Árvore de Decisão Base (M3) | 0.9780 | 0.7143 | 0.5882 | 0.6452 |
+| Árvore de Decisão Otimizada (M4) | 0.9785 | 0.6712 | 0.7206 | 0.6950 |
+
+### Matriz de confusão do modelo otimizado
+A matriz de confusão do modelo final apresentou os seguintes resultados:
+
+- **Verdadeiros Negativos (TN):** 1908
+- **Falsos Positivos (FP):** 24
+- **Falsos Negativos (FN):** 19
+- **Verdadeiros Positivos (TP):** 49
+
+### Interpretação dos resultados
+A otimização do modelo resultou em melhora no desempenho geral, especialmente no **recall** e no **F1-score**, que são métricas fundamentais em problemas com classes desbalanceadas. Embora a precisão tenha apresentado leve redução, o modelo otimizado passou a identificar uma quantidade maior de falhas reais, o que é desejável no contexto de manutenção preditiva industrial.
+
+A matriz de confusão mostra que o modelo mantém excelente capacidade de reconhecer máquinas sem falha, ao mesmo tempo em que aumenta a detecção dos casos positivos de falha. Dessa forma, a solução final tornou-se mais robusta e mais adequada para apoiar decisões de manutenção.
+
+### Modelo final selecionado
+O modelo final adotado pelo grupo foi a **Árvore de Decisão Otimizada**, por apresentar melhor equilíbrio entre desempenho geral, interpretabilidade e capacidade de detecção de falhas.
